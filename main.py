@@ -16,3 +16,14 @@ def hello_http(event, context):
     except:
         pass
     return {"statusCode": 200, "body": "hello world"}
+
+from flask import Flask
+
+app = Flask('')
+
+@app.route('/')
+def main():
+    return "Your bot is alive!"
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=8080)
