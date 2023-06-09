@@ -2,7 +2,7 @@ import telebot
 from flask import Flask, request
 
 TOKEN = '6021346806:AAFMBfDMzplaQ7PVKr3SsqacxgGhhscJRKQ'
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN, threaded = False)
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
